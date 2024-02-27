@@ -1,16 +1,13 @@
-- title: Student, Harvard CS
+- title: Student, Imam Hossein Comprehensive University
+  from: 2021
+  to: Present
+  description: <strong> Grade:</strong> 17.68 
+
+  
+- title: Graduated, Malayer University
   from: 2017
   to: 2021
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-- title: Student, Malayer University
-  from: 2018
-  to: present
-  description: " Grade: 18.81 - (3.94 OVERAL GPA) - (A) <br> Activities and societies: I Ranked First In My College 
+  description: " <strong> Grade:</strong> 18.81 - (3.94 OVERAL GPA) - (A) <br> <strong>Activities and societies:</strong> I Ranked First In My College 
       <br>  ● I was interested in ML , Robotics , CV , Micro Controllers 
       <br>  ● Graphic Design 
      <br>   ● Introduction to the principles of software engineering
