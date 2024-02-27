@@ -1,7 +1,19 @@
 - name: Adobe Photoshop
-  percentage: 95
+  percentage: 80
   color: info
 
-- name: Adobe Illustrator
-  percentage: 90
+- name: MCSA 2019
+  percentage: 70
+  color: 
+
+- name: Gephi
+  percentage: 70
+  color: 
+
+- name: Proteus & CodeVision
+  percentage: 60
+  color: 
+
+- name: 3D Printing
+  percentage: 75
   color: success
