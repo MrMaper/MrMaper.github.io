@@ -8,7 +8,7 @@ weight: 3
 # **About Me**
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Experienced AI Engineer with a Master's degree in Artificial Intelligence and over 2 years of professional experience. Specializes in Python, Machine Learning, Data Mining, and PyTorch, with a solid foundation in Object Detection Models, Matlab, Git, NoSQL Database, and Adobe Photoshop. Proven track record of leveraging technical skills in developing innovative solutions and contributing to reputable journals and conferences in the AI field. Known for exceptional problem-solving abilities and a strong commitment to advancing AI technologies.
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
