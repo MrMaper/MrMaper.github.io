@@ -1,7 +1,7 @@
 ### Site Settings ###
 title: MrMaper: AI & NLP Expert
 description: 
-  "Coffee in hand :coffee: <br> AI on mind <br> bugs in fear"
+  "Coffee in hand<br> AI on mind <br> bugs in fear..."
 baseurl: "" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository: MrMaper/MrMaper.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme: YoussefRaafatNasry/portfolYOU
