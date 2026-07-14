@@ -62,9 +62,9 @@
             parseInt(parts[1], 10),
             parseInt(parts[2], 10)
           );
-          // Year-only entries (e.g. timeline "2017-01-01") show just the Jalali year
+          // Year-only entries (e.g. timeline "2017-01-01") map Gregorian year -> Jalali year (gYear - 621)
           if (parts[1] === '01' && parts[2] === '01') {
-            el.textContent = J.toPersianDigits(j.y);
+            el.textContent = J.toPersianDigits(parseInt(parts[0], 10) - 621);
           } else {
             el.textContent =
               J.toPersianDigits(j.d) + ' ' + J.months[j.m - 1] + ' ' + J.toPersianDigits(j.y);

@@ -1,83 +1,85 @@
-<div class="col mt-4">
-  <h3 class="timeline-section-title lang-en-block">Education</h3>
-  <h3 class="timeline-section-title lang-fa-block">تحصیلات</h3>
-  <div class="timeline-body bg-themed">
-    {% assign items = site.data.timeline.education | sort: "to" | reverse %} {%
-    for item in items %}
-    <div class="timeline-item">
-      <div class="content">
-        <h2>
-          <span class="lang-en">{{ item.title }}</span
-          ><span class="lang-fa">{{ item.title_fa }}</span>
-        </h2>
-        <h6 class="date">
-          <span data-date="{{ item.from }}-01-01">{{ item.from }}</span> —
-          <span data-date="{{ item.to | replace: 'Present','2026' }}-01-01"
-            >{{ item.to }}</span
-          >
-        </h6>
-        <p>
-          <span class="lang-en">{{ item.description }}</span
-          ><span class="lang-fa">{{ item.description_fa }}</span>
-        </p>
+<div class="about-timeline-grid">
+  <div class="col mt-4">
+    <h3 class="timeline-section-title lang-en-block">Education</h3>
+    <h3 class="timeline-section-title lang-fa-block">تحصیلات</h3>
+    <div class="timeline-body bg-themed">
+      {% assign items = site.data.timeline.education | sort: "to" | reverse %}
+      {% for item in items %}
+      <div class="timeline-item">
+        <div class="content">
+          <h2>
+            <span class="lang-en">{{ item.title }}</span
+            ><span class="lang-fa">{{ item.title_fa }}</span>
+          </h2>
+          <h6 class="date">
+            <span data-date="{{ item.from }}-01-01">{{ item.from }}</span> —
+            <span data-date="{{ item.to | replace: 'Present','2026' }}-01-01"
+              >{{ item.to }}</span
+            >
+          </h6>
+          <p>
+            <span class="lang-en">{{ item.description }}</span
+            ><span class="lang-fa">{{ item.description_fa }}</span>
+          </p>
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
-</div>
 
-<div class="col mt-4">
-  <h3 class="timeline-section-title lang-en-block">Academic & Research</h3>
-  <h3 class="timeline-section-title lang-fa-block">سوابق آکادمیک و پژوهشی</h3>
-  <div class="timeline-body bg-themed">
-    {% assign items = site.data.timeline.academic | sort: "from" | reverse %} {%
-    for item in items %}
-    <div class="timeline-item">
-      <div class="content">
-        <h2>
-          <span class="lang-en">{{ item.title }}</span
-          ><span class="lang-fa">{{ item.title_fa }}</span>
-        </h2>
-        <h6 class="date">
-          <span data-date="{{ item.from }}-01-01">{{ item.from }}</span> —
-          <span data-date="{{ item.to | replace: 'Present','2026' }}-01-01"
-            >{{ item.to }}</span
-          >
-        </h6>
-        <p>
-          <span class="lang-en">{{ item.description }}</span
-          ><span class="lang-fa">{{ item.description_fa }}</span>
-        </p>
+  <div class="col mt-4">
+    <h3 class="timeline-section-title lang-en-block">Academic & Research</h3>
+    <h3 class="timeline-section-title lang-fa-block">سوابق آکادمیک و پژوهشی</h3>
+    <div class="timeline-body bg-themed">
+      {% assign items = site.data.timeline.academic | sort: "from" | reverse %}
+      {% for item in items %}
+      <div class="timeline-item">
+        <div class="content">
+          <h2>
+            <span class="lang-en">{{ item.title }}</span
+            ><span class="lang-fa">{{ item.title_fa }}</span>
+          </h2>
+          <h6 class="date">
+            <span data-date="{{ item.from }}-01-01">{{ item.from }}</span> —
+            <span data-date="{{ item.to | replace: 'Present','2026' }}-01-01"
+              >{{ item.to }}</span
+            >
+          </h6>
+          <p>
+            <span class="lang-en">{{ item.description }}</span
+            ><span class="lang-fa">{{ item.description_fa }}</span>
+          </p>
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
-</div>
 
-<div class="col mt-4">
-  <h3 class="timeline-section-title lang-en-block">Industry Experience</h3>
-  <h3 class="timeline-section-title lang-fa-block">سوابق صنعتی</h3>
-  <div class="timeline-body bg-themed">
-    {% assign items = site.data.timeline.industry | sort: "from" | reverse %} {%
-    for item in items %}
-    <div class="timeline-item">
-      <div class="content">
-        <h2>
-          <span class="lang-en">{{ item.title }}</span
-          ><span class="lang-fa">{{ item.title_fa }}</span>
-        </h2>
-        <h6 class="date">
-          <span data-date="{{ item.from }}-01-01">{{ item.from }}</span> —
-          <span data-date="{{ item.to | replace: 'Present','2026' }}-01-01"
-            >{{ item.to }}</span
-          >
-        </h6>
-        <p>
-          <span class="lang-en">{{ item.description }}</span
-          ><span class="lang-fa">{{ item.description_fa }}</span>
-        </p>
+  <div class="col mt-4">
+    <h3 class="timeline-section-title lang-en-block">Industry Experience</h3>
+    <h3 class="timeline-section-title lang-fa-block">سوابق صنعتی</h3>
+    <div class="timeline-body bg-themed">
+      {% assign items = site.data.timeline.industry | sort: "from" | reverse %}
+      {% for item in items %}
+      <div class="timeline-item">
+        <div class="content">
+          <h2>
+            <span class="lang-en">{{ item.title }}</span
+            ><span class="lang-fa">{{ item.title_fa }}</span>
+          </h2>
+          <h6 class="date">
+            <span data-date="{{ item.from }}-01-01">{{ item.from }}</span> —
+            <span data-date="{{ item.to | replace: 'Present','2026' }}-01-01"
+              >{{ item.to }}</span
+            >
+          </h6>
+          <p>
+            <span class="lang-en">{{ item.description }}</span
+            ><span class="lang-fa">{{ item.description_fa }}</span>
+          </p>
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </div>
