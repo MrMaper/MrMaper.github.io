@@ -51,18 +51,20 @@ html.lang-fa body {
   text-align: right;
 }
 
-/* Justify ALL Persian paragraphs everywhere (natural RTL kashida stretching,
-   no forced word/letter gaps) */
+/* Justify ALL Persian text (consistent across the whole site).
+   Default RTL justification uses kashida stretching; we avoid inter-word/
+   inter-character which create ugly gaps. */
+html.lang-fa,
+html.lang-fa .lang-fa-block,
+html.lang-fa .post,
+html.lang-fa .timeline-item,
+html.lang-fa .pillar-card,
+html.lang-fa .card-text {
+  text-align: justify;
+}
 html.lang-fa p,
 html.lang-fa li {
-  text-align: justify !important;
-  line-height: 2;
-}
-/* Narrower cards: keep readable, avoid ugly stretching on single lines */
-html.lang-fa .timeline-item p,
-html.lang-fa .pillar-card p,
-html.lang-fa .card-text {
-  text-align: right;
+  text-align: justify;
   line-height: 1.9;
 }
 html.lang-fa .navbar-nav {
