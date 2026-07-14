@@ -51,16 +51,19 @@ html.lang-fa body {
   text-align: right;
 }
 
-/* Justify ALL Persian paragraphs everywhere for a clean, aligned look */
+/* Justify ALL Persian paragraphs everywhere (natural RTL kashida stretching,
+   no forced word/letter gaps) */
 html.lang-fa p,
-html.lang-fa li,
-html.lang-fa .card-text,
-html.lang-fa .timeline-item p,
-html.lang-fa .post p,
-html.lang-fa .pillar-card p {
-  text-align: justify;
-  text-justify: inter-word;
+html.lang-fa li {
+  text-align: justify !important;
   line-height: 2;
+}
+/* Narrower cards: keep readable, avoid ugly stretching on single lines */
+html.lang-fa .timeline-item p,
+html.lang-fa .pillar-card p,
+html.lang-fa .card-text {
+  text-align: right;
+  line-height: 1.9;
 }
 html.lang-fa .navbar-nav {
   padding-right: 0;
