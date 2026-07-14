@@ -42,6 +42,8 @@ html.lang-fa .ml-auto {
   user-select: none;
   font-size: 0.85rem;
   line-height: 1.6;
+  display: inline-flex;
+  align-items: center;
 }
 html.lang-fa #lang-toggle {
   margin-left: 0;
@@ -55,10 +57,20 @@ html.lang-fa #lang-toggle {
 .pillar-card {
   padding: 1.25rem 1.5rem;
   border-radius: 12px;
-  background: var(--bg-secondary, #f5f7fa);
+  background: #f5f7fa;
   border: 1px solid rgba(0, 0, 0, 0.06);
   height: 100%;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 html.lang-fa .pillar-card {
   text-align: right;
+}
+
+/* Dark mode support for pillar cards (theme uses [data-theme="dark"]) */
+[data-theme="dark"] .pillar-card {
+  background: #242526;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
 }

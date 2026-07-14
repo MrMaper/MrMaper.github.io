@@ -56,16 +56,26 @@
     return (typeof cur === 'string') ? cur : null;
   }
 
-  function toggle() {
+  function toggleFn() {
     var current = getLang();
     applyLang(current === 'fa' ? 'en' : 'fa');
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
+  function init() {
     var toggle = document.getElementById('lang-toggle');
-    if (toggle) toggle.addEventListener('click', toggle);
-    applyLang(getLang());
-  });
+    if (toggle) {
+      toggle.addEventListener('click', toggleFn);
+      // Ensure correct initial label even if applyLang ran early
+      applyLang(getLang());
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    // Script loaded after DOMContentLoaded (e.g. at end of body) — init now.
+    init();
+  }
 
   // Expose for manual use
   window.MrMaperLang = { get: getLang, set: applyLang, toggle: toggle };

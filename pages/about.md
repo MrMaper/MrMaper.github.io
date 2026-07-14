@@ -9,9 +9,11 @@ weight: 3
 
 # About Me
 
-I am **Mohammad Roustaei** :wave:, a graduate student and researcher in Artificial Intelligence with a focus on **Natural Language Processing (NLP) for the Persian language**. My work sits at the intersection of academic research and real-world software engineering: I build open-source tools, teach, and turn theoretical models into deployable solutions.
+**Mohammad Roustaei** is an AI researcher and project manager specializing in **Large Language Models (LLMs)** and **Natural Language Processing (NLP)** for the Persian language. He holds an M.Sc. in Computer Engineering (Artificial Intelligence) from Imam Hossein University, where his thesis introduced a method for generating Persian social-media text using language models (Grade: Excellent, admitted via the Exceptional Talent quota).
 
-I care about the _craft_ of engineering — clean code, solid documentation, and reproducible research — and about making AI accessible to the Persian-speaking community.
+He currently serves as a **Project Manager** at the Innovation Center for Cognitive Sciences and Technologies (IUST), leading AI research on LLMs and Persian NLP systems, and as Head of the Student Research Committee on Language Models at Imam Hossein University, where he supervises graduate theses.
+
+His work bridges academic research and deployed products: from fine-tuning Persian LLMs and sentiment analysis to building chatbot and content-generation systems. He is also a lecturer on professional soft skills and computing fundamentals.
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
@@ -28,9 +30,11 @@ I care about the _craft_ of engineering — clean code, solid documentation, and
 
 # درباره من
 
-من **محمد روستایی** هستم :wave:، دانشجو و پژوهشگر هوش مصنوعی با تمرکز بر **پردازش زبان طبیعی (NLP) زبان فارسی**. کار من در تقاطع پژوهش آکادمیک و مهندسی نرم‌افزارِ کاربردی قرار دارد: ابزارهای متن‌باز می‌سازم، تدریس می‌کنم و مدل‌های تئوری را به راهکارهای قابل‌اجرا تبدیل می‌کنم.
+**محمد روستایی** پژوهشگر هوش مصنوعی و مدیر پروژه با تمرکز بر **مدل‌های زبانی بزرگ (LLM)** و **پردازش زبان طبیعی (NLP)** برای زبان فارسی است. او مدرک کارشناسی‌ارشد مهندسی کامپیوتر (هوش مصنوعی) را از دانشگاه امام حسین (ع) دریافت کرده که موضوع پایان‌نامه آن روشی برای تولید متن فارسی در شبکه‌های اجتماعی با استفاده از مدل‌های زبانی بود (نمره عالی، پذیرش از طریق سهمیه استعداد درخشان).
 
-برای من «هنر مهندسی» اهمیت دارد — کدِ تمیز، مستندسازی درست و پژوهشِ بازتولیدپذیر — و اینکه هوش مصنوعی را برای جامعه فارسی‌زبان در دسترس کنم.
+او هم‌اکنون **مدیر پروژه** در مرکز نوآوری علوم شناختی و فناوری‌های شناختی (IUST) است و پژوهش‌های هوش مصنوعی متمرکز بر LLM و سامانه‌های NLP فارسی را رهبری می‌کند و همزمان به عنوان رئیس کمیته پژوهشی دانشجویی مدل‌های زبانی در دانشگاه امام حسین (ع)، پایان‌نامه‌های تحصیلات تکمیلی را راهنمایی می‌نماید.
+
+کار او پیوند میان پژوهش آکادمیک و محصولات اجرایی است: از تنظیم دقیق (fine-tuning) مدل‌های زبانی فارسی و تحلیل احساسات تا ساخت سامانه‌های چت‌بات و تولید محتوا. او همچنین مدرس مهارت‌های نرم حرفه‌ای و مبانی رایانه است.
 
 <div class="row">
 {% include about/skills.html title="مهارت‌های برنامه‌نویسی" source=site.data.programming-skills %}

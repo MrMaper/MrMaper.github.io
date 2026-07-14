@@ -1,19 +1,19 @@
-- name: Python
-  percentage: 85
+- name: Python (PyTorch, Transformers)
+  percentage: 90
   color: success
 
-- name: PyTorch
-  percentage: 75
-  color: danger
-
-- name: NLP / Persian Language Models
-  percentage: 78
+- name: NLP / Persian LLMs
+  percentage: 88
   color: primary
 
-- name: Machine Learning
-  percentage: 75
+- name: Machine Learning & Deep Learning
+  percentage: 85
+  color: danger
+
+- name: MATLAB
+  percentage: 72
   color: secondary
 
-- name: Git & GitHub
+- name: Git & GitHub / Docker
   percentage: 82
   color: info

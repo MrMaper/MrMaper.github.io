@@ -1,16 +1,24 @@
-- title: Student, Imam Hossein Comprehensive University
+- title: M.Sc., Computer Engineering – AI, Imam Hossein University
   from: 2021
-  to: Present
-  description: <strong> Grade:</strong> 17.68 
+  to: 2024
+  description: "<strong>Thesis:</strong> A Method for Generating Persian Text on Social Media Using Language Models — Grade: Excellent. Admitted via Exceptional Talent quota."
 
-  
-- title: Graduated, Malayer University
+- title: B.Sc., Computer Engineering, Malayer University
   from: 2017
   to: 2021
-  description: " <strong> Grade:</strong> 18.81 - (3.94 OVERAL GPA) - (A) <br> <strong>Activities and societies:</strong> I Ranked First In My College 
-      <br>  ● I was interested in ML , Robotics , CV , Micro Controllers 
-      <br>  ● Graphic Design 
-     <br>   ● Introduction to the principles of software engineering
-     <br>   ● Introduction to specialized software in my field such as Matlab , SQL Server , etc 
-     <br>   ● Participate in college ACM competitions and win first place
-     <br>   ● Performing student projects "
+  description: "Graduated top of class (70 students). Final project: COVID-19 diagnosis in X-ray images — Grade 20/20. GPA: 18.81"
+
+- title: Project Manager, IUST Cognitive Sciences & Technologies Center
+  from: 2024
+  to: Present
+  description: "Leading AI research on LLMs & Persian NLP; supervised development of a Persian LLM chatbot for social media."
+
+- title: Head of Student Research Committee (Language Models), Imam Hossein University
+  from: 2024
+  to: Present
+  description: "Supervising & coaching graduate students on LLM theses; mentoring proposal writing and research design."
+
+- title: Lecturer, Mazandaran University of Science and Technology
+  from: 2026
+  to: Present
+  description: "Teaching Professional Soft Skills and General Computer Workshop."
