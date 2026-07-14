@@ -24,12 +24,6 @@ His work bridges academic research and deployed products: from fine-tuning Persi
 {% include about/timeline.html %}
 </div>
 
-<p class="mt-4">
-  <a class="btn btn-outline-primary" href="{{ '/assets/files/Roustaei_CV_PhD_2026.pdf' | relative_url }}" target="_blank" rel="noopener">
-    <i class="fas fa-file-pdf"></i>&nbsp;<span class="lang-en">Download CV (PDF)</span><span class="lang-fa">دانلود رزومه (PDF)</span>
-  </a>
-</p>
-
 </div>
 
 <div class="lang-fa-block">
@@ -50,11 +44,5 @@ His work bridges academic research and deployed products: from fine-tuning Persi
 <div class="row">
 {% include about/timeline.html %}
 </div>
-
-<p class="mt-4">
-  <a class="btn btn-outline-primary" href="{{ '/assets/files/Roustaei_CV_PhD_2026.pdf' | relative_url }}" target="_blank" rel="noopener">
-    <i class="fas fa-file-pdf"></i>&nbsp;<span class="lang-en">Download CV (PDF)</span><span class="lang-fa">دانلود رزومه (PDF)</span>
-  </a>
-</p>
 
 </div>

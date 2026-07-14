@@ -51,12 +51,13 @@ html.lang-fa body {
   text-align: right;
 }
 
-/* Justify Persian paragraphs for a clean, aligned look */
-html.lang-fa .lang-fa-block p,
-html.lang-fa .lang-fa-block li,
+/* Justify ALL Persian paragraphs everywhere for a clean, aligned look */
+html.lang-fa p,
+html.lang-fa li,
+html.lang-fa .card-text,
 html.lang-fa .timeline-item p,
 html.lang-fa .post p,
-html.lang-fa .card-text {
+html.lang-fa .pillar-card p {
   text-align: justify;
   text-justify: inter-word;
   line-height: 2;
