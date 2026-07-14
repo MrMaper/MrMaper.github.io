@@ -46,15 +46,10 @@
         endif
         -%}
       >
-        <span
-          class="lang-en"
-          data-i18n="en.nav.{{ html_page.title | downcase }}"
-          >{{ html_page.title }}</span
-        >
-        <span
-          class="lang-fa"
-          data-i18n="fa.nav.{{ html_page.title | downcase }}"
-          >{{ html_page.title }}</span
+        <span class="lang-en">{{ html_page.title }}</span>
+        <span class="lang-fa"
+          >{{ site.data.i18n.fa.nav[html_page.title | downcase] | default:
+          html_page.title }}</span
         >
       </a>
 

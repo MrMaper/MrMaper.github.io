@@ -4,9 +4,9 @@
 en:
   tagline: "AI & NLP Researcher — bridging academic theory and real-world software practice."
   nav:
-    projects: Projects
-    blog: Blog
-    about: About
+    projects: "Projects"
+    blog: "Blog"
+    about: "About"
   about_title: "About Me"
   about_intro: >
     I am <strong>Mohammad Roustaei</strong>, a graduate student and researcher in Artificial Intelligence

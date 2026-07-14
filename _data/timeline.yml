@@ -1,35 +1,53 @@
-academic:
-  - title: M.Sc., Computer Engineering – AI, Imam Hossein University
-    from: 2021
-    to: 2024
-    description: "<strong>Thesis:</strong> A Method for Generating Persian Text on Social Media Using Language Models — Grade: Excellent. Admitted via Exceptional Talent quota."
+education:
   - title: B.Sc., Computer Engineering, Malayer University
+    title_fa: "کارشناسی مهندسی کامپیوتر، دانشگاه ملایر"
     from: 2017
     to: 2021
     description: "Graduated top of class (70 students). Final project: COVID-19 diagnosis in X-ray images — Grade 20/20. GPA: 18.81"
-  - title: Head of Student Research Committee (Language Models), Imam Hossein University
-    from: 2024
-    to: Present
-    description: "Supervising & coaching graduate students on LLM theses; mentoring proposal writing and research design."
+    description_fa: "فارغ‌التحصیل رتبه اول (۷۰ دانشجو). پروژه پایانی: تشخیص کووید-۱۹ در تصاویر ایکس‌ری — نمره ۲۰/۲۰. معدل: ۱۸٫۸۱"
+  - title: M.Sc., Computer Engineering – AI, Imam Hossein University
+    title_fa: "کارشناسی‌ارشد مهندسی کامپیوتر – هوش مصنوعی، دانشگاه امام حسین (ع)"
+    from: 2021
+    to: 2024
+    description: "<strong>Thesis:</strong> A Method for Generating Persian Text on Social Media Using Language Models — Grade: Excellent. Admitted via Exceptional Talent quota."
+    description_fa: "<strong>پایان‌نامه:</strong> روشی برای تولید متن فارسی در شبکه‌های اجتماعی با استفاده از مدل‌های زبانی — نمره عالی. پذیرش از طریق سهمیه استعداد درخشان."
+
+academic:
   - title: Lecturer, Mazandaran University of Science and Technology
+    title_fa: "مدرس، دانشگاه علوم و فنون مازندران"
     from: 2026
     to: Present
     description: "Teaching Professional Soft Skills and General Computer Workshop."
-
-professional:
-  - title: Project Manager, IUST Cognitive Sciences & Technologies Center
+    description_fa: "تدریس مهارت‌های نرم حرفه‌ای و کارگاه رایانه عمومی."
+  - title: Head of Student Research Committee (Language Models), Imam Hossein University
+    title_fa: "رئیس کمیته پژوهشی دانشجویی (مدل‌های زبانی)، دانشگاه امام حسین (ع)"
     from: 2024
     to: Present
-    description: "Leading AI research on LLMs & Persian NLP; supervised development of a Persian LLM chatbot for social media."
-  - title: AI Developer, IUST Cognitive Sciences & Technologies Center
-    from: 2022
-    to: 2024
-    description: "Developed & fine-tuned deep learning models (LLMs) for Persian text generation, sentiment analysis, and chatbot systems."
-  - title: AI Researcher, Marine Research Center, Imam Hossein University
-    from: 2021
-    to: 2022
-    description: "Research on AUV navigation & control using LSTM/RNN to reduce INS-based localization errors."
+    description: "Supervising & coaching graduate students on LLM theses; mentoring proposal writing and research design."
+    description_fa: "راهنمایی و منتوری دانشجویان کارشناسی‌ارشد در پایان‌نامه‌های LLM؛ هدایت نگارش پروپوزال و طراحی پژوهش."
   - title: Research Assistant, Malayer University
+    title_fa: "دستیار پژوهشی، دانشگاه ملایر"
     from: 2018
     to: Present
     description: "Teaching assistant for introductory programming; contributed to image processing & deep learning projects."
+    description_fa: "دستیار آموزشی در دروس برنامه‌نویسی مقدماتی؛ همکاری در پروژه‌های پردازش تصویر و یادگیری عمیق."
+
+industry:
+  - title: Project Manager, IUST Cognitive Sciences & Technologies Center
+    title_fa: "مدیر پروژه، مرکز نوآوری علوم و فناوری‌های شناختی (IUST)"
+    from: 2024
+    to: Present
+    description: "Leading AI research on LLMs & Persian NLP; supervised development of a Persian LLM chatbot for social media."
+    description_fa: "رهبری پژوهش‌های هوش مصنوعی روی LLM و NLP فارسی؛ نظارت بر توسعه چت‌بات فارسی مبتنی بر LLM برای شبکه‌های اجتماعی."
+  - title: AI Developer, IUST Cognitive Sciences & Technologies Center
+    title_fa: "توسعه‌دهنده هوش مصنوعی، مرکز نوآوری علوم و فناوری‌های شناختی (IUST)"
+    from: 2022
+    to: 2024
+    description: "Developed & fine-tuned deep learning models (LLMs) for Persian text generation, sentiment analysis, and chatbot systems."
+    description_fa: "توسعه و تنظیم دقیق مدل‌های یادگیری عمیق (LLM) برای تولید متن فارسی، تحلیل احساسات و سامانه‌های چت‌بات."
+  - title: AI Researcher, Marine Research Center, Imam Hossein University
+    title_fa: "پژوهشگر هوش مصنوعی، مرکز تحقیقات دریایی، دانشگاه امام حسین (ع)"
+    from: 2021
+    to: 2022
+    description: "Research on AUV navigation & control using LSTM/RNN to reduce INS-based localization errors."
+    description_fa: "پژوهش در زمینه ناوبری و کنترل وسیله زیرسطحی خودمحرک (AUV) با استفاده از LSTM/RNN برای کاهش خطای محلی‌سازی مبتنی بر INS."

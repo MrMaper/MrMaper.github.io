@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Kalameh";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("Kalameh-Regular.a038ae9.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Kalameh";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("Kalameh-Medium.bc89e61.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Kalameh";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("Kalameh-Bold.cc91ac9.woff2") format("woff2");
+}

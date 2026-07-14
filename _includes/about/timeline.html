@@ -1,13 +1,20 @@
 <div class="col mt-4">
-  <h3 class="lang-en-block">Academic & Education</h3>
-  <h3 class="lang-fa-block">تحصیلات و فعالیت آکادمیک</h3>
+  <h3 class="timeline-section-title lang-en-block">Education</h3>
+  <h3 class="timeline-section-title lang-fa-block">تحصیلات</h3>
   <div class="timeline-body bg-themed">
-    {% for item in site.data.timeline.academic %}
+    {% assign items = site.data.timeline.education | sort: "to" | reverse %} {%
+    for item in items %}
     <div class="timeline-item">
       <div class="content">
-        <h2>{{ item.title }}</h2>
+        <h2>
+          <span class="lang-en">{{ item.title }}</span
+          ><span class="lang-fa">{{ item.title_fa }}</span>
+        </h2>
         <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
-        <p>{{ item.description }}</p>
+        <p>
+          <span class="lang-en">{{ item.description }}</span
+          ><span class="lang-fa">{{ item.description_fa }}</span>
+        </p>
       </div>
     </div>
     {% endfor %}
@@ -15,15 +22,45 @@
 </div>
 
 <div class="col mt-4">
-  <h3 class="lang-en-block">Professional Experience</h3>
-  <h3 class="lang-fa-block">سوابق شغلی و حرفه‌ای</h3>
+  <h3 class="timeline-section-title lang-en-block">Academic & Research</h3>
+  <h3 class="timeline-section-title lang-fa-block">سوابق آکادمیک و پژوهشی</h3>
   <div class="timeline-body bg-themed">
-    {% for item in site.data.timeline.professional %}
+    {% assign items = site.data.timeline.academic | sort: "from" | reverse %} {%
+    for item in items %}
     <div class="timeline-item">
       <div class="content">
-        <h2>{{ item.title }}</h2>
+        <h2>
+          <span class="lang-en">{{ item.title }}</span
+          ><span class="lang-fa">{{ item.title_fa }}</span>
+        </h2>
         <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
-        <p>{{ item.description }}</p>
+        <p>
+          <span class="lang-en">{{ item.description }}</span
+          ><span class="lang-fa">{{ item.description_fa }}</span>
+        </p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="col mt-4">
+  <h3 class="timeline-section-title lang-en-block">Industry Experience</h3>
+  <h3 class="timeline-section-title lang-fa-block">سوابق صنعتی</h3>
+  <div class="timeline-body bg-themed">
+    {% assign items = site.data.timeline.industry | sort: "from" | reverse %} {%
+    for item in items %}
+    <div class="timeline-item">
+      <div class="content">
+        <h2>
+          <span class="lang-en">{{ item.title }}</span
+          ><span class="lang-fa">{{ item.title_fa }}</span>
+        </h2>
+        <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+        <p>
+          <span class="lang-en">{{ item.description }}</span
+          ><span class="lang-fa">{{ item.description_fa }}</span>
+        </p>
       </div>
     </div>
     {% endfor %}
