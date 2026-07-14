@@ -10,7 +10,12 @@
           <span class="lang-en">{{ item.title }}</span
           ><span class="lang-fa">{{ item.title_fa }}</span>
         </h2>
-        <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+        <h6 class="date">
+          <span data-date="{{ item.from }}-01-01">{{ item.from }}</span> —
+          <span data-date="{{ item.to | replace: 'Present','2026' }}-01-01"
+            >{{ item.to }}</span
+          >
+        </h6>
         <p>
           <span class="lang-en">{{ item.description }}</span
           ><span class="lang-fa">{{ item.description_fa }}</span>
@@ -33,7 +38,12 @@
           <span class="lang-en">{{ item.title }}</span
           ><span class="lang-fa">{{ item.title_fa }}</span>
         </h2>
-        <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+        <h6 class="date">
+          <span data-date="{{ item.from }}-01-01">{{ item.from }}</span> —
+          <span data-date="{{ item.to | replace: 'Present','2026' }}-01-01"
+            >{{ item.to }}</span
+          >
+        </h6>
         <p>
           <span class="lang-en">{{ item.description }}</span
           ><span class="lang-fa">{{ item.description_fa }}</span>
@@ -56,7 +66,12 @@
           <span class="lang-en">{{ item.title }}</span
           ><span class="lang-fa">{{ item.title_fa }}</span>
         </h2>
-        <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+        <h6 class="date">
+          <span data-date="{{ item.from }}-01-01">{{ item.from }}</span> —
+          <span data-date="{{ item.to | replace: 'Present','2026' }}-01-01"
+            >{{ item.to }}</span
+          >
+        </h6>
         <p>
           <span class="lang-en">{{ item.description }}</span
           ><span class="lang-fa">{{ item.description_fa }}</span>

@@ -16,7 +16,8 @@
     {% include footer.html %} {% include analytics.html %} {% include
     scripts.html %}
 
-    <!-- Language switcher logic (must load after DOM structure exists) -->
+    <!-- Jalali (Shamsi) date conversion + language switcher (after DOM) -->
+    <script src="{{ '/assets/js/jalali.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/lang.js' | relative_url }}"></script>
 
     {%- if site.buymeacoffee.enabled == true -%}

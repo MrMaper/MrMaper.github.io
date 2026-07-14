@@ -10,7 +10,10 @@ layout: page
 </h1>
 
 <p class="post-metadata text-muted">
-  {{ page.date | date_to_long_string }} -
+  <span data-date="{{ page.date | date: '%Y-%m-%d' }}"
+    >{{ page.date | date_to_long_string }}</span
+  >
+  -
   <b>
     {%- assign words = content | number_of_words -%} {%- if words < 360 -%}
     <span class="lang-en">less than 1 min read time</span

@@ -40,6 +40,28 @@
       toggle.textContent = (lang === 'fa') ? 'EN' : 'فا';
       toggle.setAttribute('aria-label', (lang === 'fa') ? 'Switch to English' : 'تغییر به فارسی');
     }
+
+    // Convert Gregorian dates to Jalali (Shamsi) when Persian is active
+    convertDates(lang);
+  }
+
+  // Elements with [data-date="YYYY-MM-DD"] get their text swapped to Jalali in FA mode.
+  function convertDates(lang) {
+    if (!global.JalaliDate) return;
+    var nodes = document.querySelectorAll('[data-date]');
+    for (var i = 0; i < nodes.length; i++) {
+      var el = nodes[i];
+      var iso = el.getAttribute('data-date');
+      if (!el.__orig__) el.__orig__ = el.textContent;
+      if (lang === 'fa') {
+        var d = new Date(iso);
+        if (!isNaN(d.getTime())) {
+          el.textContent = global.JalaliDate.formatLong(d);
+        }
+      } else {
+        el.textContent = el.__orig__;
+      }
+    }
   }
 
   // Resolve a dotted key from site.data.i18n via a JSON blob injected by Jekyll
@@ -68,6 +90,13 @@
       // Ensure correct initial label even if applyLang ran early
       applyLang(getLang());
     }
+    // Reveal the editor link if a GitHub token is stored
+    try {
+      if (localStorage.getItem('mrmaper-gh-token')) {
+        var el = document.getElementById('editor-link');
+        if (el) el.classList.remove('d-none');
+      }
+    } catch (e) {}
   }
 
   if (document.readyState === 'loading') {

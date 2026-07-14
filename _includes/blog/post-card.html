@@ -41,7 +41,10 @@ relative_url -%} {%- endif -%}
         <span class="lang-fa">{{ post.description_fa }}</span>
       </p>
     </div>
-    <div class="card-footer {{ text_style }}">
+    <div
+      class="card-footer {{ text_style }}"
+      data-date="{{ post.date | date: '%Y-%m-%d' }}"
+    >
       {{ post.date | date_to_long_string }}
     </div>
   </a>
