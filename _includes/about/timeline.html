@@ -1,0 +1,31 @@
+<div class="col mt-4">
+  <h3 class="lang-en-block">Academic & Education</h3>
+  <h3 class="lang-fa-block">تحصیلات و فعالیت آکادمیک</h3>
+  <div class="timeline-body bg-themed">
+    {% for item in site.data.timeline.academic %}
+    <div class="timeline-item">
+      <div class="content">
+        <h2>{{ item.title }}</h2>
+        <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="col mt-4">
+  <h3 class="lang-en-block">Professional Experience</h3>
+  <h3 class="lang-fa-block">سوابق شغلی و حرفه‌ای</h3>
+  <div class="timeline-body bg-themed">
+    {% for item in site.data.timeline.professional %}
+    <div class="timeline-item">
+      <div class="content">
+        <h2>{{ item.title }}</h2>
+        <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

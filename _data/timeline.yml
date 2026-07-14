@@ -1,24 +1,35 @@
-- title: M.Sc., Computer Engineering – AI, Imam Hossein University
-  from: 2021
-  to: 2024
-  description: "<strong>Thesis:</strong> A Method for Generating Persian Text on Social Media Using Language Models — Grade: Excellent. Admitted via Exceptional Talent quota."
+academic:
+  - title: M.Sc., Computer Engineering – AI, Imam Hossein University
+    from: 2021
+    to: 2024
+    description: "<strong>Thesis:</strong> A Method for Generating Persian Text on Social Media Using Language Models — Grade: Excellent. Admitted via Exceptional Talent quota."
+  - title: B.Sc., Computer Engineering, Malayer University
+    from: 2017
+    to: 2021
+    description: "Graduated top of class (70 students). Final project: COVID-19 diagnosis in X-ray images — Grade 20/20. GPA: 18.81"
+  - title: Head of Student Research Committee (Language Models), Imam Hossein University
+    from: 2024
+    to: Present
+    description: "Supervising & coaching graduate students on LLM theses; mentoring proposal writing and research design."
+  - title: Lecturer, Mazandaran University of Science and Technology
+    from: 2026
+    to: Present
+    description: "Teaching Professional Soft Skills and General Computer Workshop."
 
-- title: B.Sc., Computer Engineering, Malayer University
-  from: 2017
-  to: 2021
-  description: "Graduated top of class (70 students). Final project: COVID-19 diagnosis in X-ray images — Grade 20/20. GPA: 18.81"
-
-- title: Project Manager, IUST Cognitive Sciences & Technologies Center
-  from: 2024
-  to: Present
-  description: "Leading AI research on LLMs & Persian NLP; supervised development of a Persian LLM chatbot for social media."
-
-- title: Head of Student Research Committee (Language Models), Imam Hossein University
-  from: 2024
-  to: Present
-  description: "Supervising & coaching graduate students on LLM theses; mentoring proposal writing and research design."
-
-- title: Lecturer, Mazandaran University of Science and Technology
-  from: 2026
-  to: Present
-  description: "Teaching Professional Soft Skills and General Computer Workshop."
+professional:
+  - title: Project Manager, IUST Cognitive Sciences & Technologies Center
+    from: 2024
+    to: Present
+    description: "Leading AI research on LLMs & Persian NLP; supervised development of a Persian LLM chatbot for social media."
+  - title: AI Developer, IUST Cognitive Sciences & Technologies Center
+    from: 2022
+    to: 2024
+    description: "Developed & fine-tuned deep learning models (LLMs) for Persian text generation, sentiment analysis, and chatbot systems."
+  - title: AI Researcher, Marine Research Center, Imam Hossein University
+    from: 2021
+    to: 2022
+    description: "Research on AUV navigation & control using LSTM/RNN to reduce INS-based localization errors."
+  - title: Research Assistant, Malayer University
+    from: 2018
+    to: Present
+    description: "Teaching assistant for introductory programming; contributed to image processing & deep learning projects."

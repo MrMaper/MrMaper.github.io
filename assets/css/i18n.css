@@ -1,5 +1,20 @@
 /* Bilingual (EN/FA) support for MrMaper site */
 
+/* Persian web font (Vazirmatn) */
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap");
+
+/* Apply Persian font + adjust base size when Farsi is active */
+html.lang-fa body,
+html.lang-fa .navbar,
+html.lang-fa .card,
+html.lang-fa .pillar-card,
+html.lang-fa .timeline-item,
+html.lang-fa .post {
+  font-family: "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
+  line-height: 2;
+  font-size: 1.02rem;
+}
+
 /* Hide the inactive language. Inline spans use .lang-en / .lang-fa. */
 html:not(.lang-fa) .lang-fa {
   display: none !important;
@@ -73,4 +88,19 @@ html.lang-fa .pillar-card {
   background: #242526;
   border-color: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* Project card image fallback (when repo has no screenshot) */
+.project-img-fallback {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #007bff22, #17a2b822);
+  color: #007bff;
+  font-size: 3rem;
+}
+[data-theme="dark"] .project-img-fallback {
+  background: linear-gradient(135deg, #007bff33, #17a2b833);
+  color: #4da3ff;
 }

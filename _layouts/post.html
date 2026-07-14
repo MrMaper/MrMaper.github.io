@@ -1,0 +1,42 @@
+---
+layout: page
+---
+
+<h1>
+  <b
+    ><span class="lang-en">{{ page.title }}</span
+    ><span class="lang-fa">{{ page.title_fa }}</span></b
+  >
+</h1>
+
+<p class="post-metadata text-muted">
+  {{ page.date | date_to_long_string }} -
+  <b>
+    {%- assign words = content | number_of_words -%} {%- if words < 360 -%}
+    <span class="lang-en">less than 1 min read time</span
+    ><span class="lang-fa">کمتر از ۱ دقیقه مطالعه</span>
+    {%- else -%}
+    <span class="lang-en">{{ words | divided_by: 180 }} mins read time</span
+    ><span class="lang-fa">{{ words | divided_by: 180 }} دقیقه مطالعه</span>
+    {%- endif -%}
+  </b>
+
+  <br />
+
+  {%- if page.tags != empty -%}
+  <span class="lang-en">Tags:</span><span class="lang-fa">برچسب‌ها:</span>
+  {% for tag in page.tags %}
+  <a
+    class="text-decoration-none no-underline"
+    href="{{ tag | slugify | prepend:'/blog/tags#' | relative_url }}"
+  >
+    <span class="tag badge badge-pill text-primary border border-primary"
+      >{{ tag }}</span
+    >
+  </a>
+  {% endfor %} {%- endif -%}
+</p>
+
+{{ content }} {% if page.comments %}
+<div class="pt-5">{% include blog/disqus.html %}</div>
+{% endif %}
