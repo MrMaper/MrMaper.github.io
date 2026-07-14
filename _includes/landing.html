@@ -1,0 +1,66 @@
+<div class="row justify-content-center align-items-center p-4">
+  <div class="col-lg-4 col-md-6 text-center mt-4">
+    <!-- Fine Circle Responsive Image -->
+    <div id="container" class="my-2">
+      <div id="dummy"></div>
+      <div id="element">
+        <img
+          src="{{ site.author.image }}"
+          alt="{{ site.title }}"
+          class="circle-image wow animated zoomIn"
+          data-wow-delay=".1s"
+        />
+      </div>
+    </div>
+
+    <!-- Bilingual tagline (block swap) -->
+    <p
+      class="text-muted wow animated slideInUp lang-en-block"
+      data-wow-delay=".15s"
+    >
+      {{ site.data.i18n.en.tagline }}
+    </p>
+    <p
+      class="text-muted wow animated slideInUp lang-fa-block"
+      data-wow-delay=".15s"
+    >
+      {{ site.data.i18n.fa.tagline }}
+    </p>
+  </div>
+</div>
+
+<!-- Content Pillars (aligned with branding roadmap) -->
+<div class="container pillars">
+  <h3 class="text-center mb-4 lang-en-block">
+    {{ site.data.i18n.en.pillars_title }}
+  </h3>
+  <h3 class="text-center mb-4 lang-fa-block">
+    {{ site.data.i18n.fa.pillars_title }}
+  </h3>
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <div class="pillar-card">
+        <h5 class="lang-en-block">{{ site.data.i18n.en.pillar_1_title }}</h5>
+        <h5 class="lang-fa-block">{{ site.data.i18n.fa.pillar_1_title }}</h5>
+        <p class="lang-en-block">{{ site.data.i18n.en.pillar_1_text }}</p>
+        <p class="lang-fa-block">{{ site.data.i18n.fa.pillar_1_text }}</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="pillar-card">
+        <h5 class="lang-en-block">{{ site.data.i18n.en.pillar_2_title }}</h5>
+        <h5 class="lang-fa-block">{{ site.data.i18n.fa.pillar_2_title }}</h5>
+        <p class="lang-en-block">{{ site.data.i18n.en.pillar_2_text }}</p>
+        <p class="lang-fa-block">{{ site.data.i18n.fa.pillar_2_text }}</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="pillar-card">
+        <h5 class="lang-en-block">{{ site.data.i18n.en.pillar_3_title }}</h5>
+        <h5 class="lang-fa-block">{{ site.data.i18n.fa.pillar_3_title }}</h5>
+        <p class="lang-en-block">{{ site.data.i18n.en.pillar_3_text }}</p>
+        <p class="lang-fa-block">{{ site.data.i18n.fa.pillar_3_text }}</p>
+      </div>
+    </div>
+  </div>
+</div>

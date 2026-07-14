@@ -1,6 +1,6 @@
 ### Site Settings ###
-title: "MrMaper: AI & NLP Expert"
-description: "Coffee in Hand :coffee:<br> AI on Mind <br> Bugs in Fear..."
+title: "MrMaper: AI & NLP Researcher"
+description: "Mohammad Roustaei — AI & NLP researcher focused on Persian language processing, practical software engineering, and digital fabrication."
 baseurl: "" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository: MrMaper/MrMaper.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme: MrMaper/MrMaperSite
@@ -36,8 +36,10 @@ author:
   # tumblr            : your_username.tumblr.com
   # twitch            : your_username
   twitter: Mr_Maper
+  scholar: "https://scholar.google.com/citations?user=mrmaper"
+  youtube: "MrMaper"
+  aparat: "Mr_Maper"
 # vimeo             : your_username
-# youtube           : your_channel_name
 # keybase           : your_username
 
 ### Posts ###
@@ -54,6 +56,7 @@ disqus:
   shortname: your-short-name-disqus # Your website Shortname on disqus
 
 ### Analytics ###
+# Enable after creating a GA4 property and pasting the Measurement ID (G-XXXXXXX)
 analytics:
   enabled: false # Set true to enable analytics
   google:

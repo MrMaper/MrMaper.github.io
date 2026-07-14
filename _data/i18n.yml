@@ -1,0 +1,47 @@
+# Bilingual strings for MrMaper site (EN / FA)
+# Access in Liquid via site.data.i18n[lang].<key>
+
+en:
+  tagline: "AI & NLP Researcher — bridging academic theory and real-world software practice."
+  nav:
+    projects: Projects
+    blog: Blog
+    about: About
+  about_title: "About Me"
+  about_intro: >
+    I am <strong>Mohammad Roustaei</strong>, a graduate student and researcher in Artificial Intelligence
+    with a focus on Natural Language Processing (NLP) for the Persian language. My work sits at the
+    intersection of academic research and practical software engineering: I build open-source tools,
+    teach, and turn theoretical models into deployed solutions.
+  pillars_title: "What I Work On"
+  pillar_1_title: "AI & NLP"
+  pillar_1_text: "Persian language models, text processing, applied machine learning with Python & PyTorch."
+  pillar_2_title: "Software & Project Management"
+  pillar_2_text: "Agile/Scrum, GitHub workflows, and turning research into shippable products."
+  pillar_3_title: "Digital Fabrication"
+  pillar_3_text: "3D printing & hardware design — bringing AI into the physical world."
+  contact_cta: "Let's connect"
+  read_more: "Read more"
+  lang_label: "فا"
+
+fa:
+  tagline: "پژوهشگر هوش مصنوعی و پردازش زبان فارسی — حلقه مفقوده میان تئوری آکادمیک و عمل صنعتی."
+  nav:
+    projects: "پروژه‌ها"
+    blog: "وبلاگ"
+    about: "درباره من"
+  about_title: "درباره من"
+  about_intro: >
+    من <strong>محمد روستایی</strong>، دانشجو و پژوهشگر هوش مصنوعی با تمرکز بر پردازش زبان طبیعی (NLP)
+    برای زبان فارسی هستم. کار من در تقاطع پژوهش آکادمیک و مهندسی نرم‌افزارِ کاربردی قرار دارد:
+    ابزارهای متن‌باز می‌سازم، تدریس می‌کنم و مدل‌های تئوری را به راهکارهای اجرایی تبدیل می‌کنم.
+  pillars_title: "حوزه‌های فعالیت من"
+  pillar_1_title: "هوش مصنوعی و NLP"
+  pillar_1_text: "مدل‌های زبانی فارسی، پردازش متن و یادگیری ماشین کاربردی با پایتون و PyTorch."
+  pillar_2_title: "مدیریت نرم‌افزار و پروژه"
+  pillar_2_text: "متدولوژی چابک (Agile/Scrum)، جریان کاری گیت‌هاب و تبدیل پژوهش به محصول."
+  pillar_3_title: "ساخت دیجیتال"
+  pillar_3_text: "پرینت سه‌بعدی و طراحی سخت‌افزار — انتقال هوش مصنوعی به دنیای فیزیکی."
+  contact_cta: "بیایید در ارتباط باشیم"
+  read_more: "بیشتر بخوانید"
+  lang_label: "EN"

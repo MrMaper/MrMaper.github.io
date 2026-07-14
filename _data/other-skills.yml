@@ -1,19 +1,15 @@
-- name: Adobe Photoshop
+- name: Project Management (Agile/Scrum)
+  percentage: 78
+  color: primary
+
+- name: 3D Printing & CAD
+  percentage: 75
+  color: success
+
+- name: Technical Writing & Teaching
   percentage: 80
   color: info
 
-- name: MCSA 2019
+- name: Data Visualization (Gephi/Matplotlib)
   percentage: 70
-  color: 
-
-- name: Gephi
-  percentage: 70
-  color: 
-
-- name: Proteus & CodeVision
-  percentage: 60
-  color: 
-
-- name: 3D Printing
-  percentage: 75
-  color: success
+  color: warning

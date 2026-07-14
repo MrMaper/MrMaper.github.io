@@ -1,0 +1,64 @@
+/* Bilingual (EN/FA) support for MrMaper site */
+
+/* Hide the inactive language. Inline spans use .lang-en / .lang-fa. */
+html:not(.lang-fa) .lang-fa {
+  display: none !important;
+}
+html.lang-fa .lang-en {
+  display: none !important;
+}
+
+/* Block-level bilingual wrappers */
+html:not(.lang-fa) .lang-fa-block {
+  display: none !important;
+}
+html.lang-fa .lang-en-block {
+  display: none !important;
+}
+
+/* RTL adjustments when Persian is active */
+html.lang-fa {
+  direction: rtl;
+}
+html.lang-fa body {
+  text-align: right;
+}
+html.lang-fa .navbar-nav {
+  padding-right: 0;
+}
+html.lang-fa .ml-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* Language toggle button */
+#lang-toggle {
+  cursor: pointer;
+  font-weight: 600;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  padding: 0.1rem 0.5rem;
+  margin-left: 0.5rem;
+  user-select: none;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+html.lang-fa #lang-toggle {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+/* Pillars grid */
+.pillars {
+  margin-top: 2rem;
+}
+.pillar-card {
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  background: var(--bg-secondary, #f5f7fa);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+html.lang-fa .pillar-card {
+  text-align: right;
+}

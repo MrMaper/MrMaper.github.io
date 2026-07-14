@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  {% include head.html %}
+
+  <!-- Bilingual assets & data -->
+  <link rel="stylesheet" href="{{ '/assets/css/i18n.css' | relative_url }}" />
+  <script>
+    window.__I18N__ = {{ site.data.i18n | jsonify }};
+  </script>
+
+  <body class="h-100 d-flex flex-column">
+    <main class="flex-shrink-0 container mt-5">
+      {% include navbar.html %} {{ content }}
+    </main>
+    {% include footer.html %} {% include analytics.html %} {% include
+    scripts.html %}
+
+    <!-- Language switcher logic (must load after DOM structure exists) -->
+    <script src="{{ '/assets/js/lang.js' | relative_url }}"></script>
+
+    {%- if site.buymeacoffee.enabled == true -%}
+    <script
+      data-name="BMC-Widget"
+      data-cfasync="false"
+      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+      data-id="{{ site.buymeacoffee.username }}"
+      data-description="{{ site.buymeacoffee.description }}"
+      data-message="{{ site.buymeacoffee.message }}"
+      data-color="{{ site.buymeacoffee.color }}"
+      data-position="Right"
+      data-x_margin="16"
+      data-y_margin="16"
+    ></script>
+    {%- endif -%}
+  </body>
+</html>

@@ -5,11 +5,13 @@ permalink: /about/
 weight: 3
 ---
 
-# **About Me**
-Hi I am **{{ site.author.name }}** :wave:,<br>
-<div style="text-align: justify">
-Experienced AI Engineer with a Master's degree in Artificial Intelligence and over 2 years of professional experience. Specializes in Python, Machine Learning, Data Mining, and PyTorch, with a solid foundation in Object Detection Models, Matlab, Git, NoSQL Database, and Adobe Photoshop. Proven track record of leveraging technical skills in developing innovative solutions and contributing to reputable journals and conferences in the AI field. Known for exceptional problem-solving abilities and a strong commitment to advancing AI technologies.
-</div>
+<div class="lang-en-block">
+
+# About Me
+
+I am **Mohammad Roustaei** :wave:, a graduate student and researcher in Artificial Intelligence with a focus on **Natural Language Processing (NLP) for the Persian language**. My work sits at the intersection of academic research and real-world software engineering: I build open-source tools, teach, and turn theoretical models into deployable solutions.
+
+I care about the _craft_ of engineering — clean code, solid documentation, and reproducible research — and about making AI accessible to the Persian-speaking community.
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
@@ -18,4 +20,25 @@ Experienced AI Engineer with a Master's degree in Artificial Intelligence and ov
 
 <div class="row">
 {% include about/timeline.html %}
+</div>
+
+</div>
+
+<div class="lang-fa-block">
+
+# درباره من
+
+من **محمد روستایی** هستم :wave:، دانشجو و پژوهشگر هوش مصنوعی با تمرکز بر **پردازش زبان طبیعی (NLP) زبان فارسی**. کار من در تقاطع پژوهش آکادمیک و مهندسی نرم‌افزارِ کاربردی قرار دارد: ابزارهای متن‌باز می‌سازم، تدریس می‌کنم و مدل‌های تئوری را به راهکارهای قابل‌اجرا تبدیل می‌کنم.
+
+برای من «هنر مهندسی» اهمیت دارد — کدِ تمیز، مستندسازی درست و پژوهشِ بازتولیدپذیر — و اینکه هوش مصنوعی را برای جامعه فارسی‌زبان در دسترس کنم.
+
+<div class="row">
+{% include about/skills.html title="مهارت‌های برنامه‌نویسی" source=site.data.programming-skills %}
+{% include about/skills.html title="سایر مهارت‌ها" source=site.data.other-skills %}
+</div>
+
+<div class="row">
+{% include about/timeline.html %}
+</div>
+
 </div>
