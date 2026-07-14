@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>پنل مدیریت وبلاگ — MrMaper</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container py-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>نوشتن / ویرایش پست</h3>
+        <a href="/logout" class="btn btn-outline-secondary btn-sm">خروج</a>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label"
+          >پست‌های موجود (برای ویرایش انتخاب کنید)</label
+        >
+        <select id="post-list" class="form-select">
+          <option value="">— پست جدید —</option>
+        </select>
+      </div>
+
+      <form id="post-form">
+        <input type="hidden" id="sha" />
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">عنوان (انگلیسی)</label>
+            <input type="text" id="titleEn" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">عنوان (فارسی)</label>
+            <input type="text" id="titleFa" class="form-control" />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">تاریخ (میلادی)</label>
+            <input type="date" id="date" class="form-control" required />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">نامک (slug انگلیسی)</label>
+            <input
+              type="text"
+              id="slug"
+              class="form-control"
+              placeholder="my-post"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">برچسب‌ها (با کاما)</label>
+            <input
+              type="text"
+              id="tags"
+              class="form-control"
+              placeholder="NLP, LLM"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">خلاصه (انگلیسی)</label>
+            <input type="text" id="excerptEn" class="form-control" />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">خلاصه (فارسی)</label>
+            <input type="text" id="excerptFa" class="form-control" />
+          </div>
+          <div class="col-12">
+            <label class="form-label">متن (انگلیسی — Markdown)</label>
+            <textarea
+              id="bodyEn"
+              class="form-control"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+          <div class="col-12">
+            <label class="form-label">متن (فارسی — Markdown)</label>
+            <textarea id="bodyFa" class="form-control" rows="10"></textarea>
+          </div>
+        </div>
+        <div class="mt-3">
+          <button type="submit" class="btn btn-success">ذخیره و انتشار</button>
+          <span id="status" class="ms-3"></span>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function loadPosts() {
+        fetch("/api/posts")
+          .then((r) => r.json())
+          .then((list) => {
+            var sel = document.getElementById("post-list");
+            list.forEach((p) => {
+              var o = document.createElement("option");
+              o.value = p.path;
+              o.textContent = p.name;
+              o.dataset.sha = p.sha;
+              sel.appendChild(o);
+            });
+          });
+      }
+      document
+        .getElementById("post-list")
+        .addEventListener("change", function () {
+          var path = this.value;
+          if (!path) {
+            document.getElementById("post-form").reset();
+            document.getElementById("sha").value = "";
+            return;
+          }
+          var sha = this.options[this.selectedIndex].dataset.sha;
+          fetch("/api/post?path=" + encodeURIComponent(path))
+            .then((r) => r.json())
+            .then((d) => {
+              var m = d.content.match(/^---\n([\s\S]*?)\n---/);
+              document.getElementById("sha").value = d.sha;
+              if (m) {
+                var fm = m[1];
+                var get = (k) => {
+                  var r = fm.match(new RegExp(k + ':\\s*"?([^"\\n]*)"?'));
+                  return r ? r[1].trim() : "";
+                };
+                document.getElementById("titleEn").value = get("title");
+                document.getElementById("titleFa").value = get("title_fa");
+                document.getElementById("date").value = get("date");
+                document.getElementById("tags").value = get("tags").replace(
+                  /[\[\]"]/g,
+                  "",
+                );
+                document.getElementById("excerptEn").value = get("description");
+                document.getElementById("excerptFa").value =
+                  get("description_fa");
+                var body = d.content.split("---\n").slice(2).join("---\n");
+                var faIdx = body.indexOf("<!-- fa -->");
+                if (faIdx >= 0) {
+                  document.getElementById("bodyEn").value = body
+                    .slice(0, faIdx)
+                    .trim();
+                  document.getElementById("bodyFa").value = body
+                    .slice(faIdx + 9)
+                    .trim();
+                } else {
+                  document.getElementById("bodyEn").value = body.trim();
+                }
+              }
+            });
+        });
+      document
+        .getElementById("post-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          var status = document.getElementById("status");
+          status.textContent = "در حال ارسال...";
+          var data = {
+            date: document.getElementById("date").value,
+            slug: document.getElementById("slug").value,
+            titleEn: document.getElementById("titleEn").value,
+            titleFa: document.getElementById("titleFa").value,
+            tags: document.getElementById("tags").value,
+            excerptEn: document.getElementById("excerptEn").value,
+            excerptFa: document.getElementById("excerptFa").value,
+            bodyEn: document.getElementById("bodyEn").value,
+            bodyFa: document.getElementById("bodyFa").value,
+            sha: document.getElementById("sha").value || undefined,
+          };
+          fetch("/api/post", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          })
+            .then((r) => r.json())
+            .then((j) => {
+              if (j.ok)
+                status.textContent =
+                  "منتشر شد! سایت پس از ~۱ دقیقه به‌روز می‌شود.";
+              else status.textContent = "خطا: " + (j.error || "نامشخص");
+            })
+            .catch((err) => (status.textContent = "خطا: " + err.message));
+        });
+      loadPosts();
+    </script>
+  </body>
+</html>

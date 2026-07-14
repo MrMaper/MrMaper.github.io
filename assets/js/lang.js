@@ -47,16 +47,28 @@
 
   // Elements with [data-date="YYYY-MM-DD"] get their text swapped to Jalali in FA mode.
   function convertDates(lang) {
-    if (!global.JalaliDate) return;
+    var J = window.JalaliDate;
+    if (!J) return;
     var nodes = document.querySelectorAll('[data-date]');
     for (var i = 0; i < nodes.length; i++) {
       var el = nodes[i];
       var iso = el.getAttribute('data-date');
       if (!el.__orig__) el.__orig__ = el.textContent;
       if (lang === 'fa') {
-        var d = new Date(iso);
-        if (!isNaN(d.getTime())) {
-          el.textContent = global.JalaliDate.formatLong(d);
+        var parts = (iso || '').split('-');
+        if (parts.length >= 3) {
+          var j = J.toJalali(
+            parseInt(parts[0], 10),
+            parseInt(parts[1], 10),
+            parseInt(parts[2], 10)
+          );
+          // Year-only entries (e.g. timeline "2017-01-01") show just the Jalali year
+          if (parts[1] === '01' && parts[2] === '01') {
+            el.textContent = J.toPersianDigits(j.y);
+          } else {
+            el.textContent =
+              J.toPersianDigits(j.d) + ' ' + J.months[j.m - 1] + ' ' + J.toPersianDigits(j.y);
+          }
         }
       } else {
         el.textContent = el.__orig__;
@@ -90,13 +102,6 @@
       // Ensure correct initial label even if applyLang ran early
       applyLang(getLang());
     }
-    // Reveal the editor link if a GitHub token is stored
-    try {
-      if (localStorage.getItem('mrmaper-gh-token')) {
-        var el = document.getElementById('editor-link');
-        if (el) el.classList.remove('d-none');
-      }
-    } catch (e) {}
   }
 
   if (document.readyState === 'loading') {
