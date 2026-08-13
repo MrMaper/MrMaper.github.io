@@ -1,15 +1,4 @@
 - name: Project Management (Jira/Trello)
-  percentage: 80
-  color: primary
-
-- name: 3D Printing & Embedded (Raspberry Pi/AVR)
-  percentage: 70
-  color: success
-
+- name: Hardware & Embedded (Raspberry Pi, AVR, 3D Printing)
 - name: Technical Writing & Teaching
-  percentage: 85
-  color: info
-
 - name: Data Viz & Image Processing (OpenCV/Gephi)
-  percentage: 75
-  color: warning

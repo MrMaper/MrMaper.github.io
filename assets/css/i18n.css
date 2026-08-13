@@ -1,7 +1,51 @@
-/* Bilingual (EN/FA) support for MrMaper site */
+/* Bilingual (EN/FA) support + academic navy/gold brand overrides for the site */
 
-/* Persian web font (Kalameh) — self-hosted */
+/* Persian web font (Kalameh) — self-hosted (must stay the first rule: @import
+   is only valid before any other CSS rule) */
 @import url("/assets/fonts/kalameh/kalameh.css");
+
+:root {
+  --navy: #143654;
+  --navy-dark: #0d2338;
+  --accent-gold: #b8912f;
+  --paper: #f7f5f0;
+}
+
+/* ---- Override the stock Bootstrap CDN "primary" blue ----
+   head.html loads Bootstrap 4.6.0 straight from a CDN (unmodified, default
+   #007bff) and this stylesheet loads after it, so these rules are what
+   actually re-skins every .btn-outline-primary / badge / bg-primary use
+   across the theme to the navy/gold palette — changing the SCSS $primary
+   variable alone does not touch classes used directly in markup like these. */
+.btn-primary,
+.badge-primary {
+  background-color: var(--navy) !important;
+  border-color: var(--navy) !important;
+}
+.btn-outline-primary {
+  color: var(--navy) !important;
+  border-color: var(--navy) !important;
+}
+.btn-outline-primary:hover {
+  background-color: var(--navy) !important;
+  border-color: var(--navy) !important;
+  color: #fff !important;
+}
+.text-primary {
+  color: var(--navy) !important;
+}
+.border-primary {
+  border-color: var(--navy) !important;
+}
+.bg-primary {
+  background-color: var(--navy) !important;
+}
+/* Project tool badges (.badge-pill.text-primary.border-primary): swap to a
+   gold outline so tags read as an accent rather than a wall of navy. */
+.badge.text-primary.border-primary {
+  color: var(--accent-gold) !important;
+  border-color: var(--accent-gold) !important;
+}
 
 /* Apply Persian font + adjust base size when Farsi is active */
 html.lang-fa body,
@@ -21,7 +65,11 @@ html.lang-fa .timeline-body {
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
-  color: var(--primary, #007bff);
+  color: var(--accent-gold);
+  font-size: 1.05rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent-gold);
+  display: inline-block;
 }
 html.lang-fa .timeline-section-title {
   text-align: right;
@@ -103,6 +151,7 @@ html.lang-fa #lang-toggle {
   border-radius: 12px;
   background: #f5f7fa;
   border: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: 3px solid var(--accent-gold);
   height: 100%;
   transition:
     background-color 0.3s ease,
@@ -116,6 +165,7 @@ html.lang-fa .pillar-card {
 [data-theme="dark"] .pillar-card {
   background: #242526;
   border-color: rgba(255, 255, 255, 0.08);
+  border-top-color: var(--accent-gold);
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -152,7 +202,7 @@ html.lang-fa .pillar-card {
 .timeline-item .date {
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--primary, #007bff);
+  color: var(--accent-gold);
   margin: 0 0 0.4rem 0;
 }
 .timeline-item p {
@@ -169,12 +219,6 @@ html.lang-fa .pillar-card {
 }
 .about-timeline-grid .col {
   margin-top: 0 !important;
-}
-.timeline-section-title {
-  font-size: 1.05rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 2px solid var(--primary, #007bff);
-  display: inline-block;
 }
 [data-theme="dark"] .timeline-item {
   background: #242526;
@@ -193,11 +237,33 @@ html.lang-fa .pillar-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #007bff22, #17a2b822);
-  color: #007bff;
+  background: linear-gradient(135deg, #14365422, #3e6e8c22);
+  color: var(--navy);
   font-size: 3rem;
 }
 [data-theme="dark"] .project-img-fallback {
-  background: linear-gradient(135deg, #007bff33, #17a2b833);
-  color: #4da3ff;
+  background: linear-gradient(135deg, #14365455, #3e6e8c55);
+  color: #cfe0ee;
+}
+
+/* Skills — pill list (replaces the old percentage progress bars) */
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.skill-pill {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  font-size: 0.88rem;
+  font-weight: 500;
+  background: transparent;
+}
+[data-theme="dark"] .skill-pill {
+  border-color: var(--accent-gold);
+  color: #e9d9ae;
 }
